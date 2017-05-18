@@ -37,10 +37,10 @@ static id instance;
     __weak __typeof(self)weakSelf = self;
     UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
-        self.completion();
+        strongSelf.completion();
     }];
     
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+//    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
     
     [alertVC addAction:sureAction];
 //    [alertVC addAction:cancelAction];

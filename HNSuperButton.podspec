@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "HNSuperButton"
-s.version      = "1.0.0"
+s.version      = "1.0.1"
 s.summary      = "interesting button"
 s.homepage     = "https://github.com/hanamichi-code/HNSuperButton"
 s.license      = "MIT"

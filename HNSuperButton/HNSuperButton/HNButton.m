@@ -10,7 +10,7 @@
 
 @interface HNButton ()
 
-@property (nonatomic, copy) void (^completion)();
+//@property (nonatomic, copy) void (^completion)();
 
 @end
 
@@ -32,12 +32,12 @@ static id instance;
 }
 
 - (void)showMessage:(NSString *)message completion:(void (^)())completion {
-    self.completion = completion;
+//    self.completion = completion;
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
-    __weak __typeof(self)weakSelf = self;
+    
     UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        __strong __typeof(weakSelf)strongSelf = weakSelf;
-        strongSelf.completion();
+        
+        completion();
     }];
     
 //    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
